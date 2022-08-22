@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class':'com.sankalpanthi.Trying'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+dependencies {
+    // https://mvnrepository.com/artifact/com.paymennt/solanaj
+    implementation 'com.paymennt:solanaj:0.0.7'
+    // https://mvnrepository.com/artifact/com.paymennt/cryptoj
+    implementation 'com.paymennt:cryptoj:0.0.5'
+    // https://mvnrepository.com/artifact/org.slf4j/slf4j-api
+    implementation 'org.slf4j:slf4j-api:1.7.5'
+    // https://mvnrepository.com/artifact/org.slf4j/slf4j-simple
+    implementation 'org.slf4j:slf4j-simple:1.6.4'
+    // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
+}                         //group:name:version
+
+test {
+    useJUnitPlatform()
+}
